@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-This module contains an async routine that executes multiple coroutines concurrently.
+This module contains an async routine that executes
+    multiple coroutines concurrently.
 """
 
 import asyncio
@@ -17,7 +18,8 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
         max_delay (int): Maximum delay for each wait_random call
 
     Returns:
-        List[float]: List of all delays in ascending order without using sort()
+        List[float]: List of all delays in ascending order
+        without using sort()
     """
     tasks = [wait_random(max_delay) for _ in range(n)]
     delays = await asyncio.gather(*tasks)
