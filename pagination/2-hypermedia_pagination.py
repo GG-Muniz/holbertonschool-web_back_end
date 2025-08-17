@@ -54,8 +54,7 @@ class Server:
             return []
         return data[start_index:end_index]
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) ->
-    Dict[str, object]:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, object]:
         """Return hypermedia pagination details for a page request.
 
         The returned dictionary contains:
