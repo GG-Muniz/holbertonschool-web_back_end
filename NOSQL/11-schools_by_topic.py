@@ -17,4 +17,4 @@ def schools_by_topic(mongo_collection, topic: str) -> List[Dict[str, Any]]:
 
 
 if __name__ == "__main__":
-    pass 
+    pass

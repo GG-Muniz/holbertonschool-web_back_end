@@ -15,4 +15,4 @@ def update_topics(mongo_collection, name: str, topics: List[str]) -> None:
 
 
 if __name__ == "__main__":
-    pass 
+    pass

@@ -19,4 +19,4 @@ def list_all(mongo_collection) -> List[dict]:
 
 
 if __name__ == "__main__":
-    pass 
+    pass

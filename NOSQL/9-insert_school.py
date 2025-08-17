@@ -18,4 +18,4 @@ def insert_school(mongo_collection, **kwargs: Any) -> Any:
 
 
 if __name__ == "__main__":
-    pass 
+    pass
