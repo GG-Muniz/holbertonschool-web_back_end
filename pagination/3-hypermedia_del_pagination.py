@@ -40,17 +40,21 @@ class Server:
         """
         if self.__indexed_dataset is None:
             dataset = self.dataset()
-            # Keep the full dataset indexed to match the 
-            provided main script behavior
-            self.__indexed_dataset = {i: dataset[i] for i in range(len(dataset))}
+            # Keep the full dataset indexed to match the provided
+            # main script behavior
+            self.__indexed_dataset = {
+                i: dataset[i] for i in range(len(dataset))
+            }
         return self.__indexed_dataset
 
-    def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict[str, object]:
+    def get_hyper_index(
+        self, index: int = None, page_size: int = 10
+    ) -> Dict[str, object]:
         """Return a deletion-resilient hypermedia page starting from index.
 
         Args:
-            index: Starting index for the page (0-based). Must be within range
-                   of the current indexed dataset keys.
+            index: Starting index for the page (0-based). Must be within
+                range of the current indexed dataset keys.
             page_size: Number of items to return.
 
         Returns:
