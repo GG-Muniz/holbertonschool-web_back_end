@@ -13,3 +13,6 @@ export function taskFirst() {
 
     return combination;
   }
+
+// Call the functions and print the output
+console.log(taskFirst() + ' ' + taskNext());
