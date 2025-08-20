@@ -13,12 +13,6 @@ export function taskFirst() {
 
     return combination;
   }
-    export function taskNext() {
-    let combination = 'But sometimes let';
-    combination += getLast();
-
-    return combination;
-  }
 
 // Call the functions and print the output
 console.log(taskFirst() + ' ' + taskNext());
