@@ -27,10 +27,12 @@ function buildStudentsReport(path) {
 
       const total = students.length;
       const linesOut = [`Number of students: ${total}`];
-      Object.keys(fieldGroups).forEach((field) => {
-        const list = fieldGroups[field];
-        linesOut.push(`Number of students in ${field}: ${list.length}. List: ${list.join(', ')}`);
-      });
+      Object.keys(fieldGroups)
+        .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
+        .forEach((field) => {
+          const list = fieldGroups[field];
+          linesOut.push(`Number of students in ${field}: ${list.length}. List: ${list.join(', ')}`);
+        });
       resolve(linesOut.join('\n'));
     });
   });
