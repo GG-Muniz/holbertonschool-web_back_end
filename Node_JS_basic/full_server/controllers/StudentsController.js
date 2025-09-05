@@ -1,11 +1,12 @@
-import readDatabase from '../utils.js';
+import readDatabase from '../utils';
 
 class StudentsController {
   static async getAllStudents(req, res) {
     const databasePath = process.argv[2];
     try {
       const data = await readDatabase(databasePath);
-      const fields = Object.keys(data).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+      const fields = Object.keys(data)
+        .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
       const lines = ['This is the list of our students'];
       fields.forEach((field) => {
         const list = data[field] || [];
